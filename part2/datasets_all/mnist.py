@@ -12,8 +12,8 @@ class SumMNIST(Dataset):
         self.root = root
         self.split = split
         if(split == "train"):
-            self.imgs = np.concatenate([np.load(root + "data0.npy"), np.load(root + "data1.npy"),np.load(root + "data2.npy")])
-            self.labels = np.concatenate([np.load(root + "lab0.npy"), np.load(root + "lab1.npy"),np.load(root + "lab2.npy")])
+            self.imgs = np.concatenate([np.load(root + "data0.npy"), np.load(root + "data1.npy")])
+            self.labels = np.concatenate([np.load(root + "lab0.npy"), np.load(root + "lab1.npy")])
         else:
             self.imgs = np.concatenate([np.load(root + "data2.npy")])
             self.labels = np.concatenate([np.load(root + "lab2.npy")])
